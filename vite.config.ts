@@ -1,5 +1,9 @@
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  base: "/Forelesning08",
+  server: {
+    proxy: {
+      "/api": "http://localhost:3000",
+    },
+  },
 });
